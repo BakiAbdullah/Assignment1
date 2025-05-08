@@ -28,9 +28,16 @@ interface User {
 }
 
 const user: User = {
-  name: "Alice",
-  age: 25
+  name: "Baki",
+  age: 28,
+  hobby: 'Gardening';
 };
 
 
-# Topic 2: The keyof keyword in TypeScript with example.
+
+#Topic 2: The keyof keyword in TypeScript with example.
+
+## keyof is a keyword in TypeScript which is used to extract the key type from an object type.
+
+
+
