@@ -16,28 +16,12 @@ with the help of `interface` we can use extends keyword. while types use interse
 Interfaces can provide more descriptive error messages in some cases, particularly when dealing with object shapes.
 
 
-### ✅ Interface Supports Declaration Merging
-
-```ts
-interface User {
-  name: string;
-}
-
-interface User {
-  age: number;
-}
-
-const user: User = {
-  name: "Baki",
-  age: 28,
-  hobby: 'Gardening';
-};
 
 
 
-#Topic 2: The keyof keyword in TypeScript with example.
+# Topic 2: The keyof keyword in TypeScript with example. 
 
-## keyof is a keyword in TypeScript which is used to extract the key type from an object type.
+keyof is a keyword in TypeScript which is used to extract the key type from an object type.
 
 
 
