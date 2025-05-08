@@ -1,9 +1,5 @@
 function formatString(input: string, toUpper?: boolean) {
-  if (toUpper !== false) {
-    return input.toUpperCase();
-  } else {
-    return input.toLowerCase();
-  }
+  return toUpper !== false ? input.toUpperCase() : input.toLowerCase();
 }
 //------->
 
@@ -55,3 +51,59 @@ class Car extends Vehicle {
 const myCar = new Car("Mustang Gt", 2010, "Ford");
 // -------->
 
+function processValue(value: string | number): number {
+  return typeof value === "string" ? value.length : value * 2;
+}
+// -------->
+
+interface Product {
+  name: string;
+  price: number;
+}
+
+function getMostExpensiveProduct(products: Product[]): Product | null {
+  if (products.length === 0) return null;
+
+  return products.reduce((prevProduct, currentProduct) => {
+    return currentProduct.price > prevProduct.price
+      ? currentProduct
+      : prevProduct;
+  });
+}
+
+const products = [
+  { name: "Watch", price: 90 },
+  { name: "Macbook", price: 250 },
+  { name: "Headphone", price: 40 },
+];
+// -------->
+
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+
+function getDayType(day: Day): string {
+  return day === Day.Saturday || day === Day.Sunday ? "Weekend" : "Weekday";
+}
+// -------->
+
+async function squareAsync(params: number): Promise<number> {
+  return await new Promise((resolve, reject) => {
+    if (params < 0) {
+      reject(new Error("Error: Negative number not allowed"));
+    } else {
+      setTimeout(() => {
+        resolve(params * params);
+      }, 1000);
+    }
+  });
+}
+
+squareAsync(-4).then(console.log);
+// -------->
