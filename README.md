@@ -21,7 +21,17 @@ Interfaces can provide more descriptive error messages in some cases, particular
 
 # Topic 2: The keyof keyword in TypeScript with example. 
 
-keyof is a keyword in TypeScript which is used to extract the key type from an object type.
+keyof is a keyword in TypeScript which is used to extract the key type from an object type. `keyof` takes an object type and returns a union of its keys.
+
+## Some usecases of keyof with example
+```ts
+type Person1 = {
+  name: string;
+  age: number;
+};
+
+type PersonKey = keyof Person1;
+// result: "name" | "age"
 
 
 
