@@ -104,6 +104,4 @@ async function squareAsync(params: number): Promise<number> {
     }
   });
 }
-
-squareAsync(-4).then(console.log);
 // -------->
